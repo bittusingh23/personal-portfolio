@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Bittu Kumar Singh - Python Developer and AI/ML Learner">
+
+    <title>Bittu Kumar Singh | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="/static/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header" id="top">
+        <nav class="navbar container" aria-label="Main navigation">
+
+            <a class="brand" href="#top">
+                <span>Bittu</span> Kumar Singh
+            </a>
+
+            <div class="desktop-nav">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Project</a>
+                <a href="#journey">Journey</a>
+                <a href="#contact">Let's Talk</a>
+            </div>
+
+            <div class="nav-actions">
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Toggle theme"
+                >
+                    <i data-lucide="sun"></i>
+                    <span class="toggle-track">
+                        <span class="toggle-thumb"></span>
+                    </span>
+                    <i data-lucide="moon"></i>
+                </button>
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                >
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div class="header-rule"></div>
+    </header>
+
+    <!-- MOBILE RIGHT-SIDE DRAWER -->
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+    <aside
+        class="mobile-drawer"
+        id="mobileDrawer"
+        aria-label="Mobile navigation"
+        aria-hidden="true"
+    >
+        <div class="drawer-head">
+            <a class="brand" href="#top">
+                <span>Bittu</span> Kumar Singh
+            </a>
+
+            <button
+                class="drawer-close"
+                id="drawerClose"
+                type="button"
+                aria-label="Close menu"
+            >
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+        <nav class="drawer-nav">
+            <a href="#about"><i data-lucide="house"></i> About</a>
+            <a href="#skills"><i data-lucide="chart-no-axes-column"></i> Skills</a>
+            <a href="#projects"><i data-lucide="folder"></i> Project</a>
+            <a href="#journey"><i data-lucide="map"></i> Journey</a>
+            <a href="#contact"><i data-lucide="send"></i> Let's Talk</a>
+        </nav>
+
+        <div class="drawer-theme">
+            <span>Theme</span>
+
+            <button
+                class="theme-toggle"
+                id="drawerThemeToggle"
+                type="button"
+                aria-label="Toggle theme"
+            >
+                <i data-lucide="sun"></i>
+                <span class="toggle-track">
+                    <span class="toggle-thumb"></span>
+                </span>
+                <i data-lucide="moon"></i>
+            </button>
+        </div>
+    </aside>
+
+    <main>
+
+        <!-- HERO / PROFILE -->
+        <section class="hero container" id="home">
+
+            <div class="hero-copy">
+                <p class="eyebrow">Hello, I'm</p>
+
+                <h1>
+                    <span class="accent-text">Bittu</span>
+                    Kumar Singh
+                </h1>
+
+                <h2>
+                    BCA Student
+                    <span>|</span> Python Developer
+                    <span>|</span> Generative AI
+                </h2>
+
+                <p class="hero-description" id="heroIntro">
+                    I love building real-world projects, learning new
+                    technologies and turning ideas into useful solutions.
+                </p>
+
+                <div class="hero-buttons">
+                    <a class="button button-primary" href="#contact">
+                        Let's Talk
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                    <a
+                        class="button button-outline"
+                        href="/static/Bittu_Kumar_Singh_Python_Backend_Intern_Resume.pdf"
+                    >
+                        View Resume
+                    </a>
+                </div>
+
+                <div class="social-links hero-social">
+                       <div class="social-links hero-social">
+    <a href="https://github.com/YOUR_USERNAME"
+       aria-label="GitHub"
+       target="_blank"
+       rel="noopener noreferrer">
+        <i data-lucide="github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/YOUR_USERNAME/"
+       aria-label="LinkedIn"
+       target="_blank"
+       rel="noopener noreferrer">
+        <i data-lucide="linkedin"></i>
+    </a>
+</div>
+               <a href="#" aria-label="linkedin">
+                <i data-lucide="linkedin"></i>
+               </a>   
+                    <!-- <a href="mailto:hello@example.com" aria-label="Email">
+                        <i data-lucide="mail"></i>
+                    </a> -->
+                </div>
+            </div>
+
+            <!-- PROFILE PHOTO -->
+            <div class="hero-visual">
+
+                <div class="shape shape-one"></div>
+                <div class="shape shape-two"></div>
+
+                <div class="profile-photo-wrap">
+
+                    <div class="profile-fallback" id="profileFallback">
+                        BS
+                    </div>
+
+                    <img
+                        src="/image/profile%20photo.jpeg"
+                        id="profilePhoto"
+                        alt="Bittu Kumar Singh"
+                        onload="document.getElementById('profileFallback').style.display='none'"
+                        onerror="this.style.display='none'"
+                    >
+
+                </div>
+
+                <span class="spark spark-one">✳</span>
+                <span class="spark spark-two">✦</span>
+            </div>
+
+        </section>
+
+        <!-- STATS -->
+        <section class="stats container" id="stats">
+
+            <article class="stat-card">
+                <span class="stat-icon">
+                    <i data-lucide="code-2"></i>
+                </span>
+                <div>
+                    <strong>2+</strong>
+                    <small>Projects</small>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">
+                    <i data-lucide="chart-no-axes-combined"></i>
+                </span>
+                <div>
+                    <strong>Python</strong>
+                    <small>Currently Learning</small>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">
+                    <i data-lucide="graduation-cap"></i>
+                </span>
+                <div>
+                    <strong>BCA</strong>
+                    <small>2nd Year</small>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">
+                    <i data-lucide="rocket"></i>
+                </span>
+                <div>
+                    <strong>Always</strong>
+                    <small>Keep Exploring</small>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section container about-section" id="about">
+
+            <div class="section-copy">
+                <p class="section-kicker"><span></span> About Me</p>
+
+                <h2>A bit about me</h2>
+
+                <p>
+                    I'm a BCA student passionate about Python, AI/ML
+                    and web development. I enjoy building projects
+                    that solve real problems.
+                </p>
+
+                <p class="muted">
+                    My current focus is strengthening my Python
+                    fundamentals, learning backend development and
+                    exploring machine learning.
+                </p>
+            </div>
+
+            <div class="about-image-card">
+                <img
+                    src="/image/profile%20photo.jpeg"
+                    alt="Bittu Kumar Singh"
+                >
+
+                <div class="image-placeholder">
+                    <i data-lucide="laptop"></i>
+                    <span>My learning workspace</span>
+                </div>
+
+                <span class="image-badge">
+                    <i data-lucide="arrow-up-right"></i>
+                </span>
+            </div>
+
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section container" id="skills">
+            <p class="section-kicker"><span></span> Skills</p>
+            <h2>Tools &amp; Technologies</h2>
+
+            <div class="skills-grid" id="skillsGrid">
+                <article class="skill-card"><span>🐍</span><strong>Python</strong></article>
+                <article class="skill-card"><span>🌐</span><strong>HTML</strong></article>
+                <article class="skill-card"><span>🎨</span><strong>CSS</strong></article>
+                <article class="skill-card"><span>⚡</span><strong>JavaScript</strong></article>
+                <article class="skill-card"><span>🚀</span><strong>FastAPI</strong></article>
+                <article class="skill-card"><span>🔀</span><strong>Git</strong></article>
+                <article class="skill-card"><span>🐙</span><strong>GitHub</strong></article>
+                <article class="skill-card"><span>💻</span><strong>VS Code</strong></article>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section container" id="projects">
+            <p class="section-kicker"><span></span> Selected Work</p>
+            <h2>Projects I've explored</h2>
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <div class="project-art project-art-orange">
+                        <i data-lucide="shopping-bag"></i>
+                        <span>01 / FRONTEND</span>
+                    </div>
+
+                    <div class="project-content">
+                        <p class="project-type">Frontend Project</p>
+                        <h3>Resto - Food Delivery Website</h3>
+
+                        <p>
+                            <!-- A food ordering interface with menu items,
+                            cart controls and checkout functionality. -->
+                            This is a pending project with some reason!
+                        </p>
+
+                        <div class="tag-list">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <div class="project-link">
+                            <a href="#empty">LINK</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-art project-art-dark">
+                        <i data-lucide="layers-3"></i>
+                        <span>02 / PYTHON</span>
+                    </div>
+
+                    <div class="project-content">
+                        <p class="project-type">Python Project</p>
+                        <h3>AI Flashcard Generator</h3>
+
+                        <p>
+                            A learning project exploring interactive
+                            flashcards and a Python backend.
+                        </p>
+
+                        <div class="tag-list">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <div class="project-link2">
+                            <a
+                                href="https://ai-flashcard-generator-6963.onrender.com/"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Show project
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- JOURNEY -->
+        <section class="section container journey-section" id="journey">
+            <p class="section-kicker"><span></span> Journey</p>
+            <h2>Learning, building, improving.</h2>
+
+            <div class="timeline">
+
+                <article class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <p class="timeline-date">CURRENT</p>
+                    <h3>BCA Student</h3>
+                    <p>
+                        Building a foundation in computer science
+                        and programming.
+                    </p>
+                </article>
+
+                <article class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <p class="timeline-date">IN PROGRESS</p>
+                    <h3>Python &amp; Backend Development</h3>
+                    <p>Practising Python, APIs and FastAPI.</p>
+                </article>
+
+                <article class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <p class="timeline-date">NEXT MILESTONE</p>
+                    <h3>Generative AI</h3>
+                    <p>
+                        Working toward stronger skills in data analysis
+                        and machine learning.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact-section" id="contact">
+            <div class="container contact-inner">
+
+                <div>
+                    <p class="section-kicker"><span></span> Let's Connect</p>
+                    <h2>Have an idea?<br><span>Let's build it.</span></h2>
+                    <p>
+                        Have a project or collaboration in mind?
+                        Send me a message.
+                    </p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <label for="name">Your name</label>
+                    <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        minlength="2"
+                        maxlength="80"
+                        required
+                        placeholder="Enter your name"
+                    >
+
+                    <label for="email">Email address</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                        placeholder="example@gmail.com"
+                    >
+
+                    <label for="subject">Subject</label>
+                    <input
+                        id="subject"
+                        name="subject"
+                        type="text"
+                        minlength="2"
+                        maxlength="120"
+                        required
+                        placeholder="Write your subject"
+                    >
+
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        minlength="10"
+                        maxlength="3000"
+                        required
+                        placeholder="Write your message here..."
+                    ></textarea>
+
+                    <button class="button button-primary" type="submit">
+                        Send Message <i data-lucide="send"></i>
+                    </button>
+
+                    <p class="form-status" id="formStatus" role="status"></p>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer container">
+        <a class="brand" href="#top">
+            <span>Bittu</span> Kumar Singh
+        </a>
+
+        <p>Built with HTML, CSS, JavaScript &amp; FastAPI</p>
+
+       
+
+</body>
+</html>
